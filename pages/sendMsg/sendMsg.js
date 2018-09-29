@@ -20,25 +20,32 @@ Page({
     getResult:function(){
         console.log("确认",this.data.phoneNumber)
         console.log(this.checkPhone(this.data.phoneNumber))
-        if(this.checkPhone(this.data.phoneNumber)){
+        if(this.checkPhone(this.data.phoneNumber) && this.checkData(this.data.initData)){
             wx.navigateTo({
                 url:"/pages/result/result_success"
               })
         }else{
-            // wx.showModal({
-            //     content: '请输入有效手机号码',
-            //     showCancel: false,
-            //     success: function (res) {
-            //         if (res.confirm) {
-            //             console.log('用户点击确定')
-            //         }
-            //     }
-            // });
-            wx.showToast({
-                icon:'none',
-                title: '请输入有效手机号码',
-                duration: 3000
-            });
+            if(!this.checkPhone(this.data.phoneNumber)){
+                wx.showToast({
+                    icon:'none',
+                    title: '请输入有效手机号码',
+                    duration: 3000
+                });
+            }
+            if(!this.checkData(this.data.initData)){
+                wx.showToast({
+                    icon:'none',
+                    title: '请输入有效文本',
+                    duration: 3000
+                });
+            }
+        }
+    },
+    checkData:function(data){
+        if(data && data.length <= 120){
+            return true;
+        }else{
+            return false;
         }
     },
     getPhone:function(e){

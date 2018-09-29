@@ -9,7 +9,6 @@
         <view class="weui-msg__opr-area">
             <view class="weui-btn-area">
                 <button class="weui-btn" type="primary" bindtap="backTo">确定</button>
-                <button class="weui-btn" type="default" bindtap="switchTo">去发短信</button>
             </view>
         </view>
         <view class="weui-msg__extra-area">
