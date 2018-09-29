@@ -4,6 +4,7 @@ const app = getApp();
 
 Page({
   data: {
+    msgCode:""
 
   },
   sendTo:function(){
@@ -28,6 +29,8 @@ Page({
     }
   },
   onShow: function () {
-
+    this.setData({
+      msgCode:""
+    })
   },
 });

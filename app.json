@@ -2,12 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/sendMsg/sendMsg",
-    "pages/readMsg/readMsg"
+    "pages/readMsg/readMsg",
+    "pages/result/result_success"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "想对你说的话",
+    "navigationBarTitleText": "偷偷告诉你  say something",
     "navigationBarTextStyle": "black"
   }
 }

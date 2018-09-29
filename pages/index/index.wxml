@@ -12,7 +12,7 @@
             <view class="weui-cells">
                 <view class="weui-cell">
                     <view class="weui-cell__bd">
-                    <input class="weui-input" type="text" placeholder="请输入信息码" bindinput="handleMsgCode" />
+                    <input class="weui-input" type="text" placeholder="请输入信息码" bindinput="handleMsgCode" value="{{msgCode}}" />
                     </view>
                 </view>
             </view>

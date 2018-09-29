@@ -1,3 +1,25 @@
 <view class="page">
-readMsg.....
+    <view class="weui-cells__title">有人想要对你说</view>
+    <view class="weui-cells weui-cells_form">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+            <p>2222既然微信小程序介绍是用户首次进入小程序看到的简介，你就需要写得有吸引人，概括精准，让大家知道你这个小程序是干嘛的;
+
+当用户搜索到你的小程序名称时，也许会出现一个列表下多个相关的小程序，这时，你的微信小程序介绍中，就一定要能够突出你的不同，你的优势，这样让用户觉得你的小程序与其他的不一样;
+
+总之，小程序介绍就如你的自我介绍一样，当你去面试，或者见客户时候，如何用简单的话让对方记住你2</p>
+            </view>
+        </view>
+    </view>
+     <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="switchTo">试试匿名短信</button>
+    </view>
+    <view class="weui-msg__extra-area">
+            <view class="weui-footer">
+                <view class="weui-footer__links">
+                    <navigator url="" class="weui-footer__link">联系我们</navigator>
+                </view>
+                <view class="weui-footer__text">Copyright © 三林吴彦祖</view>
+            </view>
+    </view>
 </view>

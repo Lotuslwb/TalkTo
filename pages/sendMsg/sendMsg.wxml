@@ -3,10 +3,10 @@
     <view class="weui-cells weui-cells_form">
         <view class="weui-cell">
             <view class="weui-cell__bd">
-            <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
-            <view class="weui-textarea-counter">
-                <span>0</span>
-                /200
+            <textarea class="weui-textarea" placeholder="请输入文本" rows="3" bindinput="handleMsg" value="{{initData}}"></textarea>
+            <view class="weui-textarea-counter" style="color:{{countColor}}">
+                <span>{{initCount}}</span>
+                /{{maxCount}}
             </view>
             </view>
         </view>
@@ -20,12 +20,21 @@
                     </picker>
                 </view>
                 <view class="weui-cell__bd weui-cell__bd_in-select-before">
-                    <input class="weui-input" placeholder="请输入号码" />
+                    <input class="weui-input" placeholder="请输入号码" bindinput="getPhone" />
                 </view>
             </view>
     </view>
     <view class="weui-btn-area">
-            <button class="weui-btn" type="primary">确定发送</button>
+            <button class="weui-btn" type="primary" bindtap="getResult">确定发送</button>
+    </view>
+
+    <view class="weui-msg__extra-area">
+            <view class="weui-footer">
+                <view class="weui-footer__links">
+                    <navigator url="" class="weui-footer__link">联系我们</navigator>
+                </view>
+                <view class="weui-footer__text">Copyright © 三林吴彦祖</view>
+            </view>
     </view>
 
 
