@@ -1,6 +1,8 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/sendMsg/sendMsg",
+    "pages/readMsg/readMsg"
   ],
   "window": {
     "backgroundTextStyle": "light",
