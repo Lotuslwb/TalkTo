@@ -7,7 +7,7 @@ import __config from './etc/config'
 
 App({
   onLaunch() {
-    // this.login();
+    this.login();
   },
   onShow() {
     console.log('ApponShow');
@@ -16,29 +16,26 @@ App({
 
   },
   login() {
-  
-    this.WxService.login()
+    return this.WxService.login()
       .then(data => {
-        var code = data.code;
-        console.log(code);
-        this.HttpService.getuserinfobycode({
-          code
-        }).then(data => {
-          userinfo = data.data;
-          this.WxService.setStorage({
-            key: "userinfo",
-            data: userinfo
-          }).then((res) => {
-            if (this.userInfoReadyCallback) {
-              this.userInfoReadyCallback(res)
-            }
-          });
+        return this.HttpService.onLogin({
+          code: data.code
         })
-      })
+      }).then(res => {
+        var openid = res.data.openid;
+        return this.WxService.setStorage({
+          key: "openid",
+          data: openid
+        }).then((res) => {
+          if (this.userInfoReadyCallback) {
+            this.userInfoReadyCallback(openid)
+          }
+          return openid;
+        })
+      });
   },
   globalData: {
     userInfo: null,
-    currentRole: ['admin']
   },
   renderImage(path) {
     if (!path) return ''

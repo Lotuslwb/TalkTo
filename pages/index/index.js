@@ -7,9 +7,9 @@ Page({
 
   },
   onLoad: function () {
-    app.HttpService.getList({}).then(data => {
-      console.log(data);
-    })
+    app.userInfoReadyCallback = (openid) => {
+      console.log(openid);
+    }
   },
   onShow: function () {
 

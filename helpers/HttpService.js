@@ -6,6 +6,7 @@ class HttpService extends WxRequest {
 		this.$$prefix = ''
 		this.$$path = {
 			getList: 'type/3/getList',
+			onLogin: 'talkto/onLogin',
 		}
 		this.interceptors.use({
 			request(request) {
@@ -55,6 +56,12 @@ class HttpService extends WxRequest {
 		})
 	}
 
+
+	onLogin(params) {
+		return this.postRequest(this.$$path.onLogin, {
+			data: params,
+		})
+	}
 	getList(params) {
 		return this.getRequest(this.$$path.getList, {
 			data: params,

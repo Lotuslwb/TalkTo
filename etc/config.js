@@ -1,7 +1,8 @@
 export default {
   //正式环境
-  basePath: 'https://sg.eldesign.cn',
-  domain: 'http://localhost:3000/',
-  store_id: 1,
-  pageSize: 20,
+  // basePath: 'https://sg.eldesign.cn',
+
+  // 本地环境
+  basePath: 'http://localhost:8080',
+
 }
