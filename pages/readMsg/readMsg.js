@@ -14,6 +14,12 @@ Page({
         this.setData({
             message:options.msg
         })
-    }
+    },
+    onShareAppMessage:function(res){
+        return {
+          title: '偷偷告诉你 say something',
+          path: '/pages/index/index'
+        }
+      }
 
 })
