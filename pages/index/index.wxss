@@ -14,13 +14,3 @@
 .writeMsg{
     margin-top:40px; 
 }
-
-.weui-footer__link{
-    border:none;
-    background: none;
-    outline: none;
-}
-
-.weui-footer__link::after {
-    border: none
-  }

@@ -67,6 +67,7 @@ Page({
         var text = e.detail.value;
         console.log('text',text.length);
         this.setData({
+            initData:text,
             initCount:text.length
         })
         if(text.length > 120){

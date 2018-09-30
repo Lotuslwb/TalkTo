@@ -20,16 +20,10 @@
         <view class="writeMsg">
             <view class="weui-cells__title">写短信</view>
             <view class="weui-btn-area">
-                <button class="weui-btn" type="primary" bindtap="sendTo">发送短信</button>
+                <button class="weui-btn" type="primary" bindtap="sendTo">发送匿名短信</button>
             </view>
         </view>
     </view>
     <!--底部-->
-    <view class="weui-footer weui-footer_fixed-bottom">
-    <view class="weui-footer__links">
-        <button class="weui-footer__link" open-type="contact">联系我们</button>
-    </view>
-    <view class="weui-footer__text">Copyright © 三林吴彦祖</view>
-    </view>
-
+    <footer/>
 </view>

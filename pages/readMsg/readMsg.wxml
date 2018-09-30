@@ -15,11 +15,6 @@
             <button class="weui-btn" type="primary" bindtap="switchTo">试试匿名短信</button>
     </view>
     <view class="weui-msg__extra-area">
-            <view class="weui-footer">
-                <view class="weui-footer__links">
-                    <navigator url="" class="weui-footer__link">联系我们</navigator>
-                </view>
-                <view class="weui-footer__text">Copyright © 三林吴彦祖</view>
-            </view>
+        <footer/>
     </view>
 </view>
