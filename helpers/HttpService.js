@@ -7,6 +7,8 @@ class HttpService extends WxRequest {
 		this.$$path = {
 			getList: 'type/3/getList',
 			onLogin: 'talkto/onLogin',
+			querySMS:'talkto/querySMS',
+			createSMS:'talkto/createSMS',
 		}
 		this.interceptors.use({
 			request(request) {
@@ -64,6 +66,16 @@ class HttpService extends WxRequest {
 	}
 	getList(params) {
 		return this.getRequest(this.$$path.getList, {
+			data: params,
+		})
+	}
+	querySMS(params) {
+		return this.postRequest(this.$$path.querySMS, {
+			data: params,
+		})
+	}
+	createSMS(params) {
+		return this.postRequest(this.$$path.createSMS, {
 			data: params,
 		})
 	}

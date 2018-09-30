@@ -8,7 +8,8 @@ Page({
         maxCount:120,
         countColor:"#b2b2b2",
         initData:"",
-        phoneNumber:""
+        phoneNumber:"",
+        openid:""
     },
     bindCountryCodeChange: function(e){
         console.log('picker country code 发生选择改变，携带值为', e.detail.value);
@@ -18,12 +19,29 @@ Page({
         })
     },
     getResult:function(){
-        console.log("确认",this.data.phoneNumber)
-        console.log(this.checkPhone(this.data.phoneNumber))
+        console.log("确认",this.data.openid)
+
         if(this.checkPhone(this.data.phoneNumber) && this.checkData(this.data.initData)){
-            wx.navigateTo({
-                url:"/pages/result/result_success"
-              })
+            app.HttpService.createSMS({
+                openId:this.data.openid,
+                tel:this.data.phoneNumber,
+                text:this.data.initData
+            }).then(res =>{
+                console.log('creat-res------->',res)
+                if(res.code == 200){
+                    wx.navigateTo({
+                        url:"/pages/result/result_success"
+                      })
+                }
+            }).catch(err =>{
+                console.log(err);
+                const errMsg = err.data.message;
+                wx.showToast({
+                    icon:'none',
+                    title: errMsg,
+                    duration: 3000
+                });
+            })
         }else{
             if(!this.checkPhone(this.data.phoneNumber)){
                 wx.showToast({
@@ -80,6 +98,12 @@ Page({
             })
         }
         
+    },
+    
+    onLoad: function(options){
+        this.setData({
+            openid:options.openid
+        })
     },
     onShow: function () {
         this.setData({
