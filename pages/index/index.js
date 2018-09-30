@@ -20,7 +20,7 @@ Page({
     if(value.length && value.length == 6){
       console.log('send!!',this.data.openid)
       app.HttpService.querySMS({
-        openId:this.data.openid,
+        openId: wx.getStorageSync('openid'),
         code:value
       }).then(res =>{
         console.log('res------->',res)
@@ -43,16 +43,11 @@ Page({
     }
   },
   onLoad: function () {
-    app.userInfoReadyCallback = (openid) => {
-      this.setData({
-        openid:openid
-      })
-      console.log(openid);
-    }
+
   },
   onShow: function () {
     this.setData({
-      msgCode:""
+      msgCode: ''
     })
   },
 });

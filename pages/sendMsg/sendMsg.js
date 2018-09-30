@@ -102,7 +102,7 @@ Page({
     
     onLoad: function(options){
         this.setData({
-            openid:options.openid
+          openid: wx.getStorageSync('openid'),
         })
     },
     onShow: function () {
