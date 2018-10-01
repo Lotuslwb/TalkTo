@@ -20,7 +20,7 @@
         <view class="writeMsg">
             <view class="weui-cells__title">写短信</view>
             <view class="weui-btn-area">
-                <button class="weui-btn" type="primary" bindtap="sendTo">发送匿名短信</button>
+                <button class="weui-btn" type="primary" bindtap="sendTo">发送悄悄话</button>
             </view>
         </view>
     </view>
