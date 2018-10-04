@@ -10,7 +10,7 @@
         </view>
     </view>
      <view class="weui-btn-area">
-            <button class="weui-btn" type="primary" bindtap="switchTo">试试匿名短信</button>
+            <button class="weui-btn" type="primary" bindtap="switchTo">试试发送悄悄话</button>
     </view>
     <view class="weui-msg__extra-area">
         <footer/>
